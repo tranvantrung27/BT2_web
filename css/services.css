@@ -1,0 +1,77 @@
+/* Services Section Styles */
+
+.services-section {
+    padding: 30px 0 60px;
+}
+
+.service_icon {
+    font-size: 40px;
+    color: #76daff;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service_content {
+    padding: 15px 0;
+}
+
+.service_content h4 {
+    font-size: 20px;
+    color: #222222;
+    font-family: Raleway-Bold;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.service_content p {
+    font-size: 16px;
+    color: #777777;
+    font-family: Raleway-Regular;
+    line-height: 1.7;
+}
+
+.about-service h4 {
+    font-size: 20px;
+    color: #222222;
+    font-family: Raleway-Bold;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.about-service p {
+    font-size: 16px;
+    color: #777777;
+    font-family: Raleway-Regular;
+}
+
+/* Service item hover effect */
+.row:hover .service_icon {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 992px) {
+    .service_icon,
+    .service_content {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .service_icon {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .services-section {
+        padding: 20px 0 40px;
+    }
+    
+    .service_content h4 {
+        font-size: 18px;
+    }
+    
+    .service_content p {
+        font-size: 14px;
+    }
+}

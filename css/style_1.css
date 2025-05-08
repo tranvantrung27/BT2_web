@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* Main CSS Document */
+
+/* Import all component styles - đường dẫn chuẩn hơn */
+@import url('./header.css');
+@import url('./slider.css');
+@import url('./about.css');
+@import url('./services.css');
+@import url('./portfolio.css');
+@import url('./blog.css');
+@import url('./testimonial.css');
+@import url('./footer.css');
+
+/* Font imports */
+@font-face {
+    font-family: Raleway-Regular;
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: Raleway-Bold;
+    src: url("../fonts/Raleway-Bold.ttf");
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Raleway-Regular;
+    font-size: 16px;
+    line-height: 30px;
+    color: #777777;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Raleway-Bold;
+    color: #222222;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: Raleway-Bold;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #76daff;
+    border-color: #76daff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #ff3c41;
+    border-color: #ff3c41;
+}
+
+.btn-outline-primary {
+    border-color: #76daff;
+    color: #76daff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #76daff;
+    border-color: #76daff;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+#preloader:before {
+    content: '';
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #f2f2f2;
+    border-top: 6px solid #76daff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

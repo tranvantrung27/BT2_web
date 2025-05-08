@@ -1,0 +1,121 @@
+/* Portfolio Section Styles */
+
+.portfolio-section {
+    padding: 30px 0 60px;
+    background-color: #f9f9f9;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(118, 218, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.portfolio-content h4 {
+    font-size: 22px;
+    font-family: Raleway-Bold;
+    margin-bottom: 5px;
+}
+
+.portfolio-content p {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.portfolio-content a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    color: #76daff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.portfolio-content a:hover {
+    background-color: #ff3c41;
+    color: white;
+    transform: rotate(360deg);
+}
+
+/* Portfolio filter buttons */
+.portfolio-filter {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.portfolio-filter button {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-family: Raleway-Bold;
+    font-size: 14px;
+    color: #222222;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.portfolio-filter button:hover,
+.portfolio-filter button.active {
+    color: #ff3c41;
+}
+
+/* Mobile hover effect */
+@media screen and (max-width: 767px) {
+    .portfolio-overlay.mobile-visible {
+        opacity: 1;
+    }
+    
+    .portfolio-content h4 {
+        font-size: 18px;
+    }
+    
+    .portfolio-content p {
+        font-size: 14px;
+    }
+    
+    .portfolio-content a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+}
